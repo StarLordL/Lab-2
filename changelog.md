@@ -1,6 +1,7 @@
 Change Log
 =============
-Team Member: H. L
-	     I. I
+Team Member: 
+H. L
+I. I
 
-Added a change log - H. L
+2016-09-15 4:52 pm Added a change log - H. L
