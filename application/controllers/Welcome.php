@@ -23,7 +23,7 @@ class Welcome extends Application
 		$authors = array ();
 		foreach ($source as $record)
 		{
-			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where'], 'wot' => $record['what']);
+			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where'], 'what' => $record['what']);
 		}
 		
 		$this->data['authors'] = $authors;
@@ -42,11 +42,13 @@ class Welcome extends Application
 		// build the list of authors, to pass on to our view
 		$source = $this->quotes->all();
 		$authors = array ();
+		
 		foreach ($source as $record)
 		{
-			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
+			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where'], 'what' => $record['what']);
 		}
-		$rand=rand(0,sizeof($authors));
+		
+		$rand=array_rand($authors,1);
 		$selectedAuth=array($authors[$rand]);
 		$this->data['authors'] = $selectedAuth;
 
